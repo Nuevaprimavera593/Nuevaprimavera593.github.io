@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contactos | Unidad Educativa Nueva Primavera</title>
+
+<style>
+
+body{
+margin:0;
+font-family:'Segoe UI',sans-serif;
+background:linear-gradient(to bottom,#001f3f,#5a5a5a,#7a0000);
+color:white;
+overflow-x:hidden;
+}
+
+
+header{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:20px;
+padding:25px;
+animation:fadeDown 1s ease;
+}
+
+header img{
+width:95px;
+}
+
+header h1{
+font-size:28px;
+text-align:center;
+}
+
+
+nav{
+background:rgba(0,0,0,0.25);
+backdrop-filter:blur(8px);
+padding:10px 0;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+nav ul{
+list-style:none;
+display:flex;
+justify-content:center;
+gap:35px;
+margin:0;
+padding:0;
+}
+
+nav ul li{
+position:relative;
+}
+
+nav ul li a{
+color:white;
+text-decoration:none;
+font-weight:600;
+padding:10px 15px;
+border-radius:6px;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+background:rgba(255,255,255,0.15);
+}
+
+
+.submenu{
+display:none;
+position:absolute;
+top:100%;
+left:0;
+background:rgba(0,0,0,0.95);
+min-width:230px;
+max-height:420px;
+overflow-y:auto;
+border-radius:10px;
+padding:5px 0;
+}
+
+nav ul li:hover .submenu{
+display:block;
+}
+
+
+.main{
+max-width:1000px;
+margin:60px auto;
+text-align:center;
+}
+
+.titulo{
+font-size:30px;
+margin-bottom:30px;
+font-weight:800;
+}
+
+
+.contactos{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.card{
+background:rgba(255,255,255,0.1);
+padding:30px;
+border-radius:15px;
+width:220px;
+transition:0.3s;
+cursor:pointer;
+text-decoration:none;
+color:white;
+}
+
+.card:hover{
+transform:translateY(-10px);
+background:rgba(255,255,255,0.2);
+}
+
+.icon{
+font-size:40px;
+margin-bottom:15px;
+}
+
+
+@keyframes fadeDown{
+from{opacity:0; transform:translateY(-20px);}
+to{opacity:1; transform:translateY(0);}
+}
+nav{
+background:rgba(0,0,0,0.25);
+backdrop-filter:blur(8px);
+padding:10px 0;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+nav ul{
+list-style:none;
+display:flex;
+justify-content:center;
+gap:35px;
+margin:0;
+padding:0;
+}
+
+nav ul li{
+position:relative;
+}
+
+nav ul li a{
+color:white;
+text-decoration:none;
+font-weight:600;
+padding:10px 15px;
+border-radius:6px;
+transition:0.3s;
+display:block;
+}
+
+nav ul li a:hover{
+background:rgba(255,255,255,0.15);
+}
+
+
+.submenu{
+display:none;
+position:absolute;
+top:100%;
+left:0;
+background:rgba(0,0,0,0.95);
+min-width:230px;
+max-height:420px;
+overflow-y:auto;
+border-radius:10px;
+padding:5px 0;
+z-index:2000;
+}
+
+
+.submenu li{
+list-style:none;
+}
+
+.submenu li a{
+display:block;
+padding:10px 15px;
+font-size:14px;
+}
+
+
+nav ul li:hover .submenu{
+display:block;
+}
+
+.submenu li a:hover{
+background:#7a0000;
+}
+
+.logo{
+width:120px;
+height:120px;
+margin:0 auto 15px;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.logo img{
+max-width:100%;
+max-height:100%;
+width:auto;
+height:auto;
+object-fit:contain;
+}
+
+
+@media screen and (max-width:768px){
+
+header{
+flex-direction:column;
+text-align:center;
+gap:10px;
+padding:15px;
+}
+
+header img{
+width:70px;
+}
+
+header h1{
+font-size:20px;
+}
+
+nav ul{
+flex-wrap:wrap;
+gap:8px;
+padding:5px;
+}
+
+nav ul li a{
+font-size:14px;
+padding:8px;
+}
+
+.submenu{
+min-width:180px;
+max-height:250px;
+overflow-y:auto;
+}
+
+.info-container{
+flex-direction:column;
+padding:0 15px;
+}
+
+.info-box{
+width:100%;
+}
+
+.main{
+padding:0 15px;
+}
+
+.titulo-seccion{
+font-size:20px;
+}
+
+.descripcion{
+font-size:15px;
+line-height:1.6;
+}
+
+.carousel{
+width:95%;
+height:250px;
+}
+
+.carousel img{
+object-fit:cover;
+}
+
+.cards{
+grid-template-columns:1fr;
+}
+
+.contactos{
+flex-direction:column;
+align-items:center;
+}
+
+.card{
+width:90%;
+max-width:300px;
+}
+
+.section,
+.section.reverse{
+flex-direction:column;
+}
+
+.texto,
+.carousel-container{
+width:100%;
+}
+
+.texto{
+text-align:center;
+}
+
+.carousel-container{
+margin-top:15px;
+}
+
+}
+
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
+
+<body>
+
+<header>
+<img src="imagenes/sello.jpeg">
+<h1>UNIDAD EDUCATIVA<br>NUEVA PRIMAVERA</h1>
+</header>
+
+<nav>
+<ul>
+<li><a href="index.html">Inicio</a></li>
+<li><a href="quienes-somos.html">Quiénes somos</a></li>
+<li>
+<a href="#">Oferta académica ▾</a>
+<div class="submenu">
+<a href="inicial1.html">Inicial I</a>
+<a href="primero.html">Primero</a>
+<a href="segundo.html">Segundo</a>
+<a href="tercero.html">Tercero A</a>
+<a href="tercerob.html">Tercero B</a>
+<a href="cuarto.html">Cuarto</a>
+<a href="quinto.html">Quinto</a>
+<a href="sexto.html">Sexto</a>
+<a href="septimo.html">Séptimo</a>
+<a href="octavo.html">Octavo</a>
+<a href="noveno.html">Noveno</a>
+<a href="decimo.html">Décimo</a>
+<a href="primero-bach.html">Primero Bachillerato</a>
+<a href="segundo-bach.html">Segundo Bachillerato</a>
+<a href="tercero-bach.html">Tercero Bachillerato</a>
+<a href="area-ciencias.html">Área Ciencias</a>
+<a href="area-informatica.html">Área Informática</a>
+<a href="area-electronica.html">Área Electrónica</a>
+<a href="areas-complementarias.html">Áreas Complementarias</a>
+</div>
+</li>
+<li><a href="galeria.html">Galería</a></li>
+<li><a href="contactos.html">Contactos</a></li>
+</ul>
+</li>
+
+</ul>
+</nav>
+
+<main class="main">
+
+<div class="titulo">CONTÁCTANOS</div>
+
+<div class="contactos">
+
+
+<a class="card" href="https://wa.me/593997766413" target="_blank">
+
+<div class="logo">
+<img src="imagenes/whatsaapp.jpeg"alt="WhatsApp">
+</div>
+
+<h3>WhatsApp</h3>
+<p>Escríbenos directamente</p>
+
+</a>
+
+<a class="card" href="https://www.facebook.com/replica.nuevaprimavera" target="_blank">
+
+<div class="logo">
+<img src="imagenes/facebook.jpeg" alt="Facebook">
+</div>
+
+<h3>Facebook</h3>
+<p>Síguenos en Facebook</p>
+
+</a>
+
+<a class="card" href="https://www.tiktok.com/@replicanuevaprimavera" target="_blank">
+
+<div class="logo">
+<img src="imagenes/tiktok.jpeg"alt="TikTok">
+</div>
+
+<h3>TikTok</h3>
+<p>Mira nuestro contenido</p>
+
+</a>
+
+</div>
+
+</main>
+
+<footer>
+<section class="ubicacion-np">
+
+    <h2>📍 Ubícanos</h2>
+
+    <div class="contenedor-ubicacion-np">
+
+        <div class="info-ubicacion-np">
+
+            <div class="pin-np">📍</div>
+
+            <h3>Unidad Educativa Nueva Primavera</h3>
+
+            <p>
+                Guamaní, Quito - Ecuador
+            </p>
+
+            <a href="https://maps.app.goo.gl/wntdfmteZdzAEfez6"
+               target="_blank"
+               class="boton-mapa-np">
+               Cómo llegar
+            </a>
+
+        </div>
+
+        <div class="mapa-np">
+
+            <iframe
+            src="https://maps.google.com/maps?q=Guamani%20Quito&t=&z=16&ie=UTF8&iwloc=&output=embed"
+            loading="lazy">
+            </iframe>
+
+        </div>
+  </div>
+
+</section>
+<style>
+.ubicacion-np{
+max-width:1200px;
+margin:80px auto;
+padding:20px;
+}
+
+.ubicacion-np h2{
+text-align:center;
+font-size:32px;
+margin-bottom:30px;
+}
+
+.contenedor-ubicacion-np{
+display:flex;
+gap:25px;
+align-items:center;
+}
+
+.info-ubicacion-np{
+flex:1;
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(15px);
+padding:30px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,.3);
+}
+
+.pin-np{
+font-size:60px;
+animation:latidoNP 2s infinite;
+}
+
+.info-ubicacion-np h3{
+margin-top:15px;
+margin-bottom:15px;
+}
+
+.boton-mapa-np{
+display:inline-block;
+margin-top:20px;
+padding:12px 25px;
+border-radius:50px;
+background:#b30000;
+color:white;
+text-decoration:none;
+font-weight:bold;
+transition:.3s;
+}
+
+.boton-mapa-np:hover{
+transform:translateY(-4px);
+}
+
+.mapa-np{
+flex:2;
+overflow:hidden;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.3);
+}
+
+.mapa-np iframe{
+width:100%;
+height:400px;
+border:none;
+}
+
+@keyframes latidoNP{
+0%,100%{
+transform:scale(1);
+}
+50%{
+transform:scale(1.15);
+}
+}
+
+@media(max-width:768px){
+
+.contenedor-ubicacion-np{
+flex-direction:column;
+}
+
+.mapa-np{
+width:100%;
+}
+
+.mapa-np iframe{
+height:300px;
+}
+
+}
+</style>
+
+
+
+</body>
+</html>

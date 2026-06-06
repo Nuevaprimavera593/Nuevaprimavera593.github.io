@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unidad Educativa Nueva Primavera</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+font-family:'Segoe UI',sans-serif;
+background:linear-gradient(135deg,#001f54,#0a3d62,#1e3799,#6b0000);
+background-attachment:fixed;
+color:#fff;overflow-x:hidden;
+}
+.hero-header{
+display:flex;align-items:center;justify-content:center;gap:25px;
+padding:35px;background:rgba(255,255,255,.08);
+backdrop-filter:blur(12px);
+box-shadow:0 5px 20px rgba(0,0,0,.25);
+}
+.hero-header img{width:110px}
+.hero-header h1{font-size:36px;text-align:center}
+.hero-header p{text-align:center;opacity:.9}
+
+nav{
+position:sticky;top:0;z-index:1000;
+background:rgba(0,0,0,.35);
+backdrop-filter:blur(10px);
+}
+nav ul{
+list-style:none;display:flex;justify-content:center;
+gap:25px;padding:15px;flex-wrap:wrap;
+}
+nav a{
+color:white;text-decoration:none;font-weight:600;
+padding:10px 14px;border-radius:8px;
+}
+nav a:hover{background:rgba(255,255,255,.15)}
+.submenu{
+display:none;position:absolute;
+background:#111;min-width:240px;
+border-radius:12px;max-height:400px;overflow:auto;
+}
+nav li{position:relative}
+nav li:hover .submenu{display:block}
+.submenu a{display:block}
+
+.info-container{
+max-width:1200px;margin:60px auto;
+display:flex;gap:25px;padding:20px;
+}
+.info-box{
+flex:1;background:rgba(255,255,255,.08);
+backdrop-filter:blur(15px);
+border-radius:20px;
+padding:25px;
+box-shadow:0 10px 25px rgba(0,0,0,.3);
+transition:.4s;
+}
+.info-box:hover{transform:translateY(-10px)}
+.info-title{text-align:center;font-size:24px;margin-bottom:15px}
+
+.carousel{
+position:relative;width:90%;max-width:1100px;
+height:700px;margin:40px auto;
+overflow:hidden;border-radius:25px;
+box-shadow:0 15px 35px rgba(0,0,0,.5);
+}
+.carousel img{
+position:absolute;width:100%;height:100%;
+object-fit:cover;opacity:0;
+transition:opacity 1.5s ease,transform 8s ease;
+ background:linear-gradient(
+        135deg,
+        #001f54,
+        #0a3d62,
+        #1e3799
+    );
+object-fit:contain;
+
+
+}
+.carousel img.active{opacity:1;transform:scale(1.08)}
+.dots{display:flex;justify-content:center;gap:10px}
+.dot{
+width:14px;height:14px;border-radius:50%;
+border:2px solid #fff;cursor:pointer;
+}
+.dot.active{background:#fff}
+
+footer{
+margin-top:60px;padding:30px;text-align:center;
+background:rgba(0,0,0,.35)
+}
+
+@media(max-width:768px){
+.hero-header{flex-direction:column}
+.hero-header h1{font-size:24px}
+nav ul{flex-direction:column;gap:8px}
+.info-container{flex-direction:column}
+.carousel{height:260px}
+.submenu{position:static;display:block;background:transparent}
+}
+</style>
+</head>
+<body>
+
+<header class="hero-header">
+<img src="imagenes/sello.jpeg">
+<div>
+<h1>UNIDAD EDUCATIVA NUEVA PRIMAVERA</h1>
+<p>Formando líderes con excelencia académica, tecnológica y humana.</p>
+</div>
+</header>
+
+<nav>
+<ul>
+<li><a href="index.html">Inicio</a></li>
+<li><a href="quienes-somos.html">Quiénes somos</a></li>
+
+<li>
+<a href="#">Oferta Académica</a>
+<ul class="submenu">
+<li><a href="inicial1.html">Inicial I</a></li>
+<li><a href="primero.html">Primero</a></li>
+<li><a href="segundo.html">Segundo</a></li>
+<li><a href="tercero.html">Tercero A</a></li>
+<li><a href="tercerob.html">Tercero B</a></li>
+<li><a href="cuarto.html">Cuarto</a></li>
+<li><a href="quinto.html">Quinto</a></li>
+<li><a href="sexto.html">Sexto</a></li>
+<li><a href="septimo.html">Séptimo</a></li>
+<li><a href="octavo.html">Octavo</a></li>
+<li><a href="noveno.html">Noveno</a></li>
+<li><a href="decimo.html">Décimo</a></li>
+<li><a href="primero-bach.html">Primero Bachillerato</a></li>
+<li><a href="segundo-bach.html">Segundo Bachillerato</a></li>
+<li><a href="tercero-bach.html">Tercero Bachillerato</a></li>
+<li><a href="area-ciencias.html">Área Ciencias</a></li>
+<li><a href="area-informatica.html">Área Informática</a></li>
+<li><a href="area-electronica.html">Área Electrónica</a></li>
+<li><a href="areas-complementarias.html">Áreas Complementarias</a></li>
+</ul>
+</li>
+
+<li><a href="galeria.html">Galería</a></li>
+<li><a href="contactos.html">Contactos</a></li>
+</ul>
+</nav>
+
+<div class="info-container">
+<div class="info-box">
+<div class="info-title">MISIÓN</div>
+<p>Somos una institución educativa comprometida con la formación integral de niños, niñas y jóvenes, brindando una educación de calidad basada en principios éticos, morales y académicos.</p>
+</div>
+<div class="info-box">
+<div class="info-title">VISIÓN</div>
+<p>Ser una institución educativa líder y referente en la formación académica y técnica, reconocida por su excelencia, innovación y compromiso.</p>
+</div>
+</div>
+
+<div class="carousel">
+<img src="imagenes/img 2.jpeg" class="active">
+<img src="imagenes/img 3.jpeg">
+<img src="imagenes/img 4.jpeg">
+<img src="imagenes/img 5.jpeg">
+<img src="imagenes/img 6.jpeg">
+<img src="imagenes/img 7.jpeg">
+<img src="imagenes/img 8.jpeg">
+<img src="imagenes/img 9.jpeg">
+<img src="imagenes/img10.jpeg">
+</div>
+<div class="dots"></div>
+
+<footer>
+<h3>UNIDAD EDUCATIVA NUEVA PRIMAVERA</h3>
+<p>© 2026 Todos los derechos reservados.</p>
+</footer>
+
+<script>
+const slides=document.querySelectorAll(".carousel img");
+const dotsContainer=document.querySelector(".dots");
+let index=0;
+slides.forEach((_,i)=>{
+ const dot=document.createElement("div");
+ dot.classList.add("dot");
+ if(i===0) dot.classList.add("active");
+ dot.onclick=()=>showSlide(i);
+ dotsContainer.appendChild(dot);
+});
+const dots=document.querySelectorAll(".dot");
+function showSlide(i){
+slides.forEach((img,n)=>{
+img.classList.toggle("active",n===i);
+dots[n].classList.toggle("active",n===i);
+});
+index=i;
+}
+setInterval(()=>{
+index=(index+1)%slides.length;
+showSlide(index);
+},4000);
+</script>
+
+<footer>
+<section class="ubicacion-np">
+
+    <h2>📍 Ubícanos</h2>
+
+    <div class="contenedor-ubicacion-np">
+
+        <div class="info-ubicacion-np">
+
+            <div class="pin-np">📍</div>
+
+            <h3>Unidad Educativa Nueva Primavera</h3>
+
+            <p>
+                Guamaní, Quito - Ecuador
+            </p>
+
+            <a href="https://maps.app.goo.gl/wntdfmteZdzAEfez6"
+               target="_blank"
+               class="boton-mapa-np">
+               Cómo llegar
+            </a>
+
+        </div>
+
+        <div class="mapa-np">
+
+            <iframe
+            src="https://maps.google.com/maps?q=Guamani%20Quito&t=&z=16&ie=UTF8&iwloc=&output=embed"
+            loading="lazy">
+            </iframe>
+
+        </div>
+  </div>
+
+</section>
+<style>
+.ubicacion-np{
+max-width:1200px;
+margin:80px auto;
+padding:20px;
+}
+
+.ubicacion-np h2{
+text-align:center;
+font-size:32px;
+margin-bottom:30px;
+}
+
+.contenedor-ubicacion-np{
+display:flex;
+gap:25px;
+align-items:center;
+}
+
+.info-ubicacion-np{
+flex:1;
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(15px);
+padding:30px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,.3);
+}
+
+.pin-np{
+font-size:60px;
+animation:latidoNP 2s infinite;
+}
+
+.info-ubicacion-np h3{
+margin-top:15px;
+margin-bottom:15px;
+}
+
+.boton-mapa-np{
+display:inline-block;
+margin-top:20px;
+padding:12px 25px;
+border-radius:50px;
+background:#b30000;
+color:white;
+text-decoration:none;
+font-weight:bold;
+transition:.3s;
+}
+
+.boton-mapa-np:hover{
+transform:translateY(-4px);
+}
+
+.mapa-np{
+flex:2;
+overflow:hidden;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.3);
+}
+
+.mapa-np iframe{
+width:100%;
+height:400px;
+border:none;
+}
+
+@keyframes latidoNP{
+0%,100%{
+transform:scale(1);
+}
+50%{
+transform:scale(1.15);
+}
+}
+
+@media(max-width:768px){
+
+.contenedor-ubicacion-np{
+flex-direction:column;
+}
+
+.mapa-np{
+width:100%;
+}
+
+.mapa-np iframe{
+height:300px;
+}
+
+}
+</style>
+
+
+
+
+
+</body>
+</html>
