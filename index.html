@@ -6,7 +6,6 @@
 
 <title>Unidad Educativa Nueva Primavera</title>
 <style>
- 
 *{margin:0;padding:0;box-sizing:border-box}
  
 body{
@@ -37,11 +36,6 @@ nav ul{flex-direction:column;gap:8px}
 .info-container{flex-direction:column}
 .carousel{height:260px}
 .submenu{position:static;display:none;background:transparent}
-}
-
-.submenu{
-display:none;
-}
 }
   .hero-header h1 {
     font-size: 24px !important; /* Más chico en cel */
@@ -82,13 +76,14 @@ color:white;text-decoration:none;font-weight:600;
 padding:10px 14px;border-radius:8px;
 }
 nav a:hover{background:rgba(255,255,255,.15)}
-nav li{position:relative}
-
-
-
-.submenu a{
-  display:block;
+.submenu{
+display:none;position:absolute;
+background:#111;min-width:240px;
+border-radius:12px;max-height:400px;overflow:auto;
 }
+nav li{position:relative}
+nav li:hover .submenu{display:block}
+.submenu a{display:block}
 
 .info-container{
 max-width:1200px;margin:60px auto;
