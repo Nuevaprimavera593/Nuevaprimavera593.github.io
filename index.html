@@ -35,6 +35,8 @@ box-shadow:0 5px 20px rgba(0,0,0,.25);}
 nav ul{flex-direction:column;gap:8px}
 .info-container{flex-direction:column}
 .carousel{height:260px}
+.submenu{position:static;display:none;background:transparent}
+}
 
 .submenu{
 display:none;
@@ -79,14 +81,17 @@ color:white;text-decoration:none;font-weight:600;
 padding:10px 14px;border-radius:8px;
 }
 nav a:hover{background:rgba(255,255,255,.15)}
-.submenu{
-display:none;position:absolute;
-background:#111;min-width:240px;
-border-radius:12px;max-height:400px;overflow:auto;
-}
 nav li{position:relative}
-nav li:hover .submenu{display:block}
-.submenu a{display:block}
+
+@media (min-width:769px){
+  nav li:hover .submenu{
+    display:block;
+  }
+}
+
+.submenu a{
+  display:block;
+}
 
 .info-container{
 max-width:1200px;margin:60px auto;
