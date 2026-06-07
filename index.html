@@ -20,6 +20,34 @@ display:flex;align-items:center;justify-content:center;gap:25px;
 padding:35px;background:rgba(255,255,255,.08);
 backdrop-filter:blur(12px);
 box-shadow:0 5px 20px rgba(0,0,0,.25);
+ @media (max-width: 768px) {
+  .hero-header {
+    flex-direction: column; /* Logo arriba, texto abajo */
+    gap: 15px !important;
+    padding: 15px !important;
+    text-align: center;
+  }
+  
+  .hero-header h1 {
+    font-size: 24px !important; /* Más chico en cel */
+    line-height: 1.3;
+  }
+  
+  .hero-header img {
+    max-width: 120px !important; /* Logo más pequeño */
+    height: auto !important;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    font-size: 16px !important;
+  }
+  
+  nav ul li {
+    padding: 10px 0;
+    width: 100%;
+  }
+}
 }
 .hero-header img{width:110px}
 .hero-header h1{font-size:36px;text-align:center}
