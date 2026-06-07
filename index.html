@@ -20,13 +20,11 @@ display:flex;align-items:center;justify-content:center;gap:25px;
 padding:35px;background:rgba(255,255,255,.08);
 backdrop-filter:blur(12px);
 box-shadow:0 5px 20px rgba(0,0,0,.25);
- @media (max-width: 768px) {
-  .hero-header {
-    flex-direction: column; /* Logo arriba, texto abajo */
-    gap: 15px !important;
-    padding: 15px !important;
-    text-align: center;
-  }
+ .submenu{
+    position:static;
+    display:none;
+    background:transparent;
+}
   
   .hero-header h1 {
     font-size: 24px !important; /* Más chico en cel */
