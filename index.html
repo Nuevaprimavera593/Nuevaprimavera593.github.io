@@ -3,114 +3,315 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Unidad Educativa Nueva Primavera</title>
+<title>Galería | Unidad Educativa Nueva Primavera</title>
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
+
 body{
+margin:0;
 font-family:'Segoe UI',sans-serif;
-background:linear-gradient(135deg,#001f54,#0a3d62,#1e3799,#6b0000);
-background-attachment:fixed;
-color:#fff;overflow-x:hidden;
+background:linear-gradient(to bottom,#001f3f,#5a5a5a,#7a0000);
+color:white;
+overflow-x:hidden;
 }
-.hero-header{
-display:flex;align-items:center;justify-content:center;gap:25px;
-padding:35px;background:rgba(255,255,255,.08);
-backdrop-filter:blur(12px);
-box-shadow:0 5px 20px rgba(0,0,0,.25);
+
+
+header{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:20px;
+padding:25px;
+animation:fadeDown 1s ease;
 }
-.hero-header img{width:110px}
-.hero-header h1{font-size:36px;text-align:center}
-.hero-header p{text-align:center;opacity:.9}
+
+header img{
+width:95px;
+}
+
+header h1{
+font-size:28px;
+text-align:center;
+}
+
 
 nav{
-position:sticky;top:0;z-index:1000;
-background:rgba(0,0,0,.35);
-backdrop-filter:blur(10px);
+background:rgba(0,0,0,0.25);
+backdrop-filter:blur(8px);
+padding:10px 0;
+position:sticky;
+top:0;
+z-index:1000;
 }
-nav ul{
-list-style:none;display:flex;justify-content:center;
-gap:25px;padding:15px;flex-wrap:wrap;
-}
-nav a{
-color:white;text-decoration:none;font-weight:600;
-padding:10px 14px;border-radius:8px;
-}
-nav a:hover{background:rgba(255,255,255,.15)}
-.submenu{
-display:none;position:absolute;
-background:#111;min-width:240px;
-border-radius:12px;max-height:400px;overflow:auto;
-}
-nav li{position:relative}
-nav li:hover .submenu{display:block}
-.submenu a{display:block}
 
-.info-container{
-max-width:1200px;margin:60px auto;
-display:flex;gap:25px;padding:20px;
+nav ul{
+list-style:none;
+display:flex;
+justify-content:center;
+gap:35px;
+margin:0;
+padding:0;
 }
-.info-box{
-flex:1;background:rgba(255,255,255,.08);
-backdrop-filter:blur(15px);
-border-radius:20px;
-padding:25px;
-box-shadow:0 10px 25px rgba(0,0,0,.3);
-transition:.4s;
+
+nav ul li{
+position:relative;
 }
-.info-box:hover{transform:translateY(-10px)}
-.info-title{text-align:center;font-size:24px;margin-bottom:15px}
+
+nav ul li a{
+color:white;
+text-decoration:none;
+font-weight:600;
+padding:10px 15px;
+border-radius:6px;
+transition:0.3s;
+display:block;
+}
+
+nav ul li a:hover{
+background:rgba(255,255,255,0.15);
+}
+
+.submenu{
+display:none;
+position:absolute;
+top:100%;
+left:0;
+background:rgba(0,0,0,0.95);
+min-width:230px;
+max-height:420px;
+overflow-y:auto;
+border-radius:10px;
+padding:5px 0;
+z-index:2000;
+}
+
+nav ul li:hover .submenu{
+display:block;
+}
+
+.submenu li a{
+display:block;
+padding:10px 15px;
+}
+
+
+.main{
+max-width:1100px;
+margin:60px auto;
+padding:0 20px;
+}
+
+
+.section{
+display:flex;
+align-items:center;
+justify-content:space-between;
+margin-bottom:80px;
+gap:40px;
+flex-wrap:wrap;
+}
+
+.section.reverse{
+flex-direction:row-reverse;
+}
+
+
+.texto{
+width:48%;
+min-width:300px;
+}
+
+.texto h2{
+font-size:26px;
+margin-bottom:15px;
+}
+
+.texto p{
+line-height:1.6;
+font-size:17px;
+}
+
+
+.carousel-container{
+width:48%;
+min-width:300px;
+}
+
 
 .carousel{
-position:relative;width:90%;max-width:1100px;
-height:700px;margin:40px auto;
-overflow:hidden;border-radius:25px;
-box-shadow:0 15px 35px rgba(0,0,0,.5);
+position:relative;
+width:100%;
+height:350px;
+overflow:hidden;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
 }
+
 .carousel img{
-position:absolute;width:100%;height:100%;
-object-fit:cover;opacity:0;
-transition:opacity 1.5s ease,transform 8s ease;
- background:linear-gradient(
-        135deg,
-        #001f54,
-        #0a3d62,
-        #1e3799
-    );
-object-fit:contain;
-
-
+position:absolute;
+width:100%;
+height:100%;
+object-fit:cover;
+opacity:0;
+transition:opacity 1s ease;
 }
-.carousel img.active{opacity:1;transform:scale(1.08)}
-.dots{display:flex;justify-content:center;gap:10px}
+
+.carousel img.active{
+opacity:1;
+}
+
+
+.dots{
+display:flex;
+justify-content:center;
+gap:8px;
+margin-top:10px;
+}
+
 .dot{
-width:14px;height:14px;border-radius:50%;
-border:2px solid #fff;cursor:pointer;
-}
-.dot.active{background:#fff}
-
-footer{
-margin-top:60px;padding:30px;text-align:center;
-background:rgba(0,0,0,.35)
+width:10px;
+height:10px;
+border-radius:50%;
+background:rgba(255,255,255,0.4);
 }
 
-@media(max-width:768px){
-.hero-header{flex-direction:column}
-.hero-header h1{font-size:24px}
-nav ul{flex-direction:column;gap:8px}
-.info-container{flex-direction:column}
-.carousel{height:260px}
-.submenu{position:static;display:block;background:transparent}
+.dot.active{
+background:white;
 }
+
+
+@keyframes fadeDown{
+from{opacity:0; transform:translateY(-20px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+
+@media(max-width:900px){
+.section{
+flex-direction:column;
+}
+
+.section.reverse{
+flex-direction:column;
+}
+
+.texto, .carousel-container{
+width:100%;
+}
+
+.carousel{
+height:250px;
+}
+}
+
+
+@media screen and (max-width:768px){
+
+header{
+flex-direction:column;
+text-align:center;
+gap:10px;
+padding:15px;
+}
+
+header img{
+width:70px;
+}
+
+header h1{
+font-size:20px;
+}
+
+nav ul{
+flex-wrap:wrap;
+gap:8px;
+padding:5px;
+}
+
+nav ul li a{
+font-size:14px;
+padding:8px;
+}
+
+.submenu{
+min-width:180px;
+max-height:250px;
+overflow-y:auto;
+}
+
+.info-container{
+flex-direction:column;
+padding:0 15px;
+}
+
+.info-box{
+width:100%;
+}
+
+.main{
+padding:0 15px;
+}
+
+.titulo-seccion{
+font-size:20px;
+}
+
+.descripcion{
+font-size:15px;
+line-height:1.6;
+}
+
+.carousel{
+width:95%;
+height:250px;
+}
+
+.carousel img{
+object-fit:cover;
+}
+
+.cards{
+grid-template-columns:1fr;
+}
+
+.contactos{
+flex-direction:column;
+align-items:center;
+}
+
+.card{
+width:90%;
+max-width:300px;
+}
+
+.section,
+.section.reverse{
+flex-direction:column;
+}
+
+.texto,
+.carousel-container{
+width:100%;
+}
+
+.texto{
+text-align:center;
+}
+
+.carousel-container{
+margin-top:15px;
+}
+
+}
+
 </style>
 </head>
+
 <body>
 
-<header class="hero-header">
+<header>
 <img src="imagenes/sello.jpeg">
-<div>
-<h1>UNIDAD EDUCATIVA NUEVA PRIMAVERA</h1>
-<p>Formando líderes con excelencia académica, tecnológica y humana.</p>
-</div>
+<h1>UNIDAD EDUCATIVA<br>NUEVA PRIMAVERA</h1>
 </header>
 
 <nav>
