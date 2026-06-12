@@ -12,7 +12,17 @@ body{margin:0;font-family:'Segoe UI',sans-serif;background:linear-gradient(to bo
 .header{display:flex;justify-content:center;align-items:center;gap:15px;padding:25px 15px 15px;animation:fadeDown 1s ease;}
 .sello{width:90px;}
 .titulo{font-size:28px;font-weight:800;text-align:center;}
-.menu{display:flex;justify-content:center;margin-top:5px;}
+.menu{
+  display:flex;
+  justify-content:center;
+  margin-top:5px;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(0,0,0,0.25);
+  backdrop-filter:blur(8px);
+  padding:10px 0;
+}
 .menu ul{list-style:none;display:flex;gap:30px;padding:0;margin:0;}
 .menu li{position:relative;}
 .menu a{text-decoration:none;color:white;font-weight:600;padding:8px 14px;border-radius:6px;transition:.3s;}
