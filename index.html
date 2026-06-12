@@ -6,8 +6,54 @@
 <title>Unidad Educativa Nueva Primavera</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
+.info-container{
+max-width:1100px;
+margin:60px auto;
+display:flex;
+gap:30px;
+padding:0 20px;
+}
 
+.info-box{
+background:rgba(255,255,255,0.08);
+border-radius:15px;
+cursor:pointer;
+width:50%;
+transition:0.4s ease;
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+.info-box:hover{
+transform:translateY(-5px);
+}
+
+.info-title{
+padding:18px;
+font-size:22px;
+font-weight:bold;
+text-align:center;
+background:rgba(0,0,0,0.35);
+border-radius:15px 15px 0 0;
+}
+
+.info-content{
+display:none;
+padding:20px;
+text-align:center;
+line-height:1.6;
+}
+
+.info-box.active{
+width:100%;
+}
+
+.info-box.hidden{
+display:none;
+}
+
+.info-box.active .info-content{
+display:block;
+}
 body{
 margin:0;
 font-family:'Segoe UI',sans-serif;
@@ -15,10 +61,6 @@ background:linear-gradient(to bottom,#001f3f,#5a5a5a,#7a0000);
 color:white;
 overflow-x:hidden;
 }
-
-.hero-header img{width:110px}
-.hero-header h1{font-size:36px;text-align:center}
-.hero-header p{text-align:center;opacity:.9}
 
 header{
 display:flex;
